@@ -1,0 +1,576 @@
+{
+  "users": [
+    {
+      "id": "123b4",
+      "fName": "Bijay",
+      "lName": "Pal",
+      "mobile": "9040123456",
+      "email": "a@a.com",
+      "dob": "1992-05-31",
+      "gender": "male",
+      "profesion": "Software Engineer",
+      "profileImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp",
+      "role": "customer",
+      "password": "a123",
+      "aboutUser": "About the user updated ..................."
+    },
+    {
+      "id": "123gsgshsghgshgs6",
+      "fName": "Srikrushna",
+      "lName": "Pal",
+      "mobile": "9040123456",
+      "email": "b@b.com",
+      "dob": "1992-05-19",
+      "gender": "female",
+      "profesion": "Software Engineer",
+      "profileImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp",
+      "role": "admin",
+      "password": "b123",
+      "aboutUser": "About the user ..................."
+    },
+    {
+      "email": "q@q.com",
+      "mobile": "9040398007",
+      "password": "q123",
+      "id": "ciVcqWV"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Rich dad and poor dad New edition",
+      "categoryId": 4,
+      "description": "What the Rich Teach Their Kids About Money That the Poor and Middle Class Do Not! Mass Market Paperback – 11 April 2017",
+      "price": 300,
+      "isAvailable": true,
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "rating": 5,
+      "vendorName": "Smiling Business",
+      "warenty": 1,
+      "review": 5
+    },
+    {
+      "id": 2,
+      "name": "The Psychology of Money",
+      "categoryId": 5,
+      "description": "Timeless lessons on wealth, greed, and happiness doing well with money isn?t necessarily about what you know. ",
+      "price": 100,
+      "isAvailable": false,
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41r6F2LRf8L._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+      "rating": 1,
+      "review": 5,
+      "vendorName": "Morgan Housel",
+      "warenty": 2
+    },
+    {
+      "id": 3,
+      "name": "Atomic Habits",
+      "categoryId": 4,
+      "description": "The life-changing million copy bestseller Paperback – 30 October 2018",
+      "price": 900,
+      "isAvailable": true,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51-nXsSRfZL._SX328_BO1,204,203,200_.jpg",
+      "rating": 3,
+      "review": 1,
+      "vendorName": "Self-Help for Happiness",
+      "warenty": 3
+    },
+    {
+      "id": 4,
+      "name": "How To Win Friends & Influence People",
+      "categoryId": 4,
+      "description": "product deceription here",
+      "price": 900,
+      "isAvailable": true,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/81pzTRIyIXS.jpg",
+      "rating": 3,
+      "review": 100,
+      "vendorName": "My Business",
+      "warenty": 3
+    },
+    {
+      "id": 5,
+      "name": "Think And Grow Rich",
+      "categoryId": 4,
+      "description": "Since its publication in 1937, Napoleon Hill’s seminal Think and Grow Rich has inspired generations of readers to develop their skills and become masters at anything to do",
+      "price": 900,
+      "isAvailable": true,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/411OtAf040L._SX322_BO1,204,203,200_.jpg",
+      "rating": 3,
+      "review": 100,
+      "vendorName": "My Business",
+      "warenty": 3
+    },
+    {
+      "id": 6,
+      "name": "The Power of Your Subconscious Mind",
+      "categoryId": 4,
+      "description": "The Power of Your Subconscious Mind is one of the most promising self improvement books that you can gift to yourself or your loved ones.",
+      "price": 900,
+      "isAvailable": true,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71sBtM3Yi5L.jpg",
+      "rating": 3,
+      "review": 100,
+      "vendorName": "Self-Help for Memory Improvement",
+      "warenty": 3
+    },
+    {
+      "id": 7,
+      "name": "Women's Faux Georgette Saree with Blouse Piece (Pink)",
+      "categoryId": 3,
+      "description": "Saree Fabric:- Georgette Blouse Fabric:- Banglorisilk Blouse With Sleeves",
+      "price": 900,
+      "isAvailable": true,
+      "image": "https://m.media-amazon.com/images/I/81USYc7n1RL._UL1500_.jpg",
+      "rating": 3,
+      "review": 100,
+      "vendorName": "My Business",
+      "warenty": 3
+    },
+    {
+      "id": 8,
+      "name": "Printed Men's Round Neck 100% Cotton T-Shirt",
+      "categoryId": 2,
+      "description": "Sweaty Armpits Graphic Printed Men's Round Neck 100% Cotton T-Shirt Sherlock Holmes Detective Sherlock T.V Show BBC The Game is On Tagline",
+      "price": 599,
+      "isAvailable": true,
+      "image": "https://m.media-amazon.com/images/I/71ijKW7kARL._UL1500_.jpg",
+      "rating": 3,
+      "review": 100,
+      "vendorName": "My Business",
+      "warenty": 3
+    },
+    {
+      "name": "Dell 15 New Inspiron 3511 Laptop (2021) 15.6 Inches",
+      "categoryId": 1,
+      "description": "Dell 15 New Inspiron 3511 Laptop (2021) 15.6 Inches Fhd 11 Th Gen Intel Core I5-1135G7 Windows 10 + Ms Office 8Gb -512Gb Ssd - 2Gb Gddr5 Nvidia Mx350 Backlit Keyboard (D560578Win9Sl)- Platinum Silver",
+      "price": 59999,
+      "isAvailable": true,
+      "image": "https://m.media-amazon.com/images/I/612whSmr1ML._SL1000_.jpg",
+      "rating": "5",
+      "vendorName": "My Business",
+      "warenty": 2,
+      "id": 9
+    },
+    {
+      "name": "Xiaomi 13 Pro",
+      "categoryId": 1,
+      "description": "Xiaomi 13 Pro (Ceramic Black, 12GB RAM 256GB Storage) | Leica Professional 50MP Triple Camera | Biggest Camera Sensor 1\" IMX989 | SD 8 Gen 2",
+      "price": 79999,
+      "isAvailable": true,
+      "image": "https://m.media-amazon.com/images/I/61RvCwjI7dL._SL1500_.jpg",
+      "rating": "4",
+      "vendorName": "amazon",
+      "warenty": 1,
+      "id": 10
+    },
+    {
+      "name": "Fire-Boltt Phoenix Smart Watch",
+      "categoryId": 1,
+      "description": "Fire-Boltt Phoenix Smart Watch with Bluetooth Calling 1.3\",120+ Sports Modes, 240 * 240 PX High Res with SpO2, Heart Rate",
+      "price": 1999,
+      "isAvailable": true,
+      "image": "https://m.media-amazon.com/images/I/61y2VVWcGBL._AC_UL480_FMwebp_QL65_.jpg",
+      "rating": "4",
+      "vendorName": "Fire-Boltt",
+      "warenty": 1,
+      "id": 11
+    },
+    {
+      "name": "Test From Json",
+      "categoryId": 5,
+      "description": "Fire-Boltt Phoenix Smart Watch with Bluetooth Calling 1.3\",120+ Sports Modes, 240 * 240 PX High Res with SpO2, Heart Rate",
+      "price": 1999,
+      "isAvailable": true,
+      "image": "https://m.media-amazon.com/images/I/61y2VVWcGBL._AC_UL480_FMwebp_QL65_.jpg",
+      "rating": "4",
+      "vendorName": "Fire-Boltt",
+      "warenty": 1,
+      "id": 18
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Electronics"
+    },
+    {
+      "id": 2,
+      "categoryName": "Men"
+    },
+    {
+      "id": 3,
+      "categoryName": "Women"
+    },
+    {
+      "id": 5,
+      "categoryName": "Kids"
+    },
+    {
+      "id": 4,
+      "categoryName": "Book"
+    },
+    {
+      "id": 4,
+      "categoryName": "Other"
+    }
+  ],
+  "cart": [
+    {
+      "product_id_quantity": [
+        {
+          "product_id": 3,
+          "quantity": 1
+        },
+        {
+          "product_id": 1,
+          "quantity": 1
+        },
+        {
+          "product_id": 2,
+          "quantity": 1
+        },
+        {
+          "product_id": 4,
+          "quantity": 1
+        },
+        {
+          "product_id": 11,
+          "quantity": 1
+        }
+      ],
+      "id": "123d"
+    }
+  ],
+  "address": [
+    {
+      "user_id": "123b4",
+      "fName": "Sri Updated from cart",
+      "lName": "Pal",
+      "line1": "H No, Plot No",
+      "line2": "H No, Plot No",
+      "country": "India",
+      "state": "Karnataka",
+      "postalCode": 560037,
+      "addressType": "Home",
+      "default": true,
+      "id": 1
+    },
+    {
+      "user_id": "123b4",
+      "fName": "Sri Address 2",
+      "lName": "Pal Address 2 ",
+      "line1": "Address 2",
+      "line2": "H No, Plot No Address 2",
+      "country": "India",
+      "state": "Karnataka",
+      "postalCode": 560037,
+      "addressType": "Home",
+      "default": false,
+      "id": 2
+    },
+    {
+      "user_id": "123b4",
+      "fName": "Sri Address 3",
+      "lName": "Pal New",
+      "line1": "H No, Plot No",
+      "line2": "H No, Plot No",
+      "country": "India",
+      "state": "Karnataka",
+      "postalCode": 560037,
+      "addressType": "Home",
+      "default": false,
+      "id": 3
+    },
+    {
+      "user_id": "123b4",
+      "fName": "Sri Added from cart",
+      "lName": "Pal",
+      "line1": "H No, Plot No",
+      "line2": "H No, Plot No",
+      "country": "India",
+      "state": "Karnataka",
+      "postalCode": 560037,
+      "addressType": "Home",
+      "default": false,
+      "id": 4
+    }
+  ],
+  "payments": [
+    {
+      "paymentMethod": "upi",
+      "upiId": "jhjhjh@ybl",
+      "transationRefNum": "nbnbn",
+      "paymentScreenshoot": "C:\\fakepath\\Resident Certificate.pdf",
+      "id": 1
+    },
+    {
+      "paymentMethod": "upi",
+      "upiId": "nbn@ybl",
+      "transationRefNum": "nbnb",
+      "paymentScreenshoot": "C:\\fakepath\\Resident Certificate.pdf",
+      "id": 2
+    },
+    {
+      "paymentMethod": "upi",
+      "upiId": "kjkj@ybl",
+      "transationRefNum": "hhgh",
+      "paymentScreenshoot": "C:\\fakepath\\Avijit.docx",
+      "id": 3
+    },
+    {
+      "paymentMethod": "upi",
+      "upiId": "jhj@ybl",
+      "transationRefNum": "jhjhjh",
+      "paymentScreenshoot": "C:\\fakepath\\cloudfront-setup.pdf",
+      "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "orderId": "SRIMON JUL 31 2023 01:02:53",
+      "userId": "123b4",
+      "paymentId": 1,
+      "product": [
+        {
+          "id": 1,
+          "quantity": 1,
+          "name": "Rich dad and poor dad New edition",
+          "image": "https://images-eu.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+          "price": 300
+        },
+        {
+          "id": 4,
+          "quantity": 3,
+          "name": "How To Win Friends & Influence People",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/81pzTRIyIXS.jpg",
+          "price": 900
+        },
+        {
+          "id": 7,
+          "quantity": 2,
+          "name": "Women's Faux Georgette Saree with Blouse Piece (Pink)",
+          "image": "https://m.media-amazon.com/images/I/81USYc7n1RL._UL1500_.jpg",
+          "price": 900
+        }
+      ],
+      "address": {
+        "user_id": "123b4",
+        "fName": "Sri Validation",
+        "lName": "Pal New",
+        "line1": "H No, Plot No",
+        "line2": "H No, Plot No",
+        "country": "India",
+        "state": "Karnataka",
+        "postalCode": 560037,
+        "addressType": "Home",
+        "default": true,
+        "id": 1
+      },
+      "orderDateTime": "2023-07-30T19:32:53.329Z",
+      "totalItemNo": 6,
+      "grandTotalAmount": 4800,
+      "id": 1
+    },
+    {
+      "orderId": "SRIMON JUL 31 2023 01:27:07",
+      "userId": "123b4",
+      "paymentId": 2,
+      "product": [
+        {
+          "id": 1,
+          "quantity": 1,
+          "name": "Rich dad and poor dad New edition",
+          "image": "https://images-eu.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+          "price": 300
+        },
+        {
+          "id": 6,
+          "quantity": 2,
+          "name": "The Power of Your Subconscious Mind",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/71sBtM3Yi5L.jpg",
+          "price": 900
+        }
+      ],
+      "address": {
+        "user_id": "123b4",
+        "fName": "Sri Validation",
+        "lName": "Pal New",
+        "line1": "H No, Plot No",
+        "line2": "H No, Plot No",
+        "country": "India",
+        "state": "Karnataka",
+        "postalCode": 560037,
+        "addressType": "Home",
+        "default": true,
+        "id": 1
+      },
+      "orderDateTime": "2023-07-30T19:57:07.783Z",
+      "totalItemNo": 3,
+      "grandTotalAmount": 2100,
+      "id": 2
+    },
+    {
+      "orderId": "SRIWED AUG 02 2023 19:57:13",
+      "userId": "123b4",
+      "paymentId": 3,
+      "product": [
+        {
+          "id": 4,
+          "quantity": 1,
+          "name": "How To Win Friends & Influence People",
+          "image": "https://images-na.ssl-images-amazon.com/images/I/81pzTRIyIXS.jpg",
+          "price": 900
+        }
+      ],
+      "address": {
+        "user_id": "123b4",
+        "fName": "Sri Validation",
+        "lName": "Pal New",
+        "line1": "H No, Plot No",
+        "line2": "H No, Plot No",
+        "country": "India",
+        "state": "Karnataka",
+        "postalCode": 560037,
+        "addressType": "Home",
+        "default": true,
+        "id": 1
+      },
+      "orderDateTime": "2023-08-02T14:27:13.183Z",
+      "totalItemNo": 1,
+      "grandTotalAmount": 900,
+      "id": 3
+    },
+    {
+      "orderId": "SRITHU AUG 03 2023 15:45:03",
+      "userId": "123b4",
+      "paymentId": 4,
+      "product": [
+        {
+          "id": 1,
+          "quantity": 2,
+          "name": "Rich dad and poor dad New edition",
+          "image": "https://images-eu.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg",
+          "price": 300
+        }
+      ],
+      "address": {
+        "user_id": "123b4",
+        "fName": "Sri Validation",
+        "lName": "Pal New",
+        "line1": "H No, Plot No",
+        "line2": "H No, Plot No",
+        "country": "India",
+        "state": "Karnataka",
+        "postalCode": 560037,
+        "addressType": "Home",
+        "default": true,
+        "id": 1
+      },
+      "orderDateTime": "2023-08-03T10:15:03.466Z",
+      "totalItemNo": 2,
+      "grandTotalAmount": 600,
+      "id": 4
+    }
+  ],
+  "track-order": [
+    {
+      "orderId": "SRIMON JUL 31 2023 01:02:53",
+      "userId": "123b4",
+      "orderUpdates": [
+        {
+          "orderStatus": "placed",
+          "orderStatusDateTime": "2023-07-30T19:32:53.329Z",
+          "orderStatusNote": ""
+        },
+        {
+          "orderStatus": "accepted",
+          "trackingNote": "2023-08-02",
+          "orderStatusDateTime": "2023-08-02T14:23:15.287Z"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "orderId": "SRIMON JUL 31 2023 01:27:07",
+      "userId": "123b4",
+      "orderUpdates": [
+        {
+          "orderStatus": "placed",
+          "orderStatusDateTime": "2023-07-30T19:57:07.783Z",
+          "orderStatusNote": ""
+        },
+        {
+          "orderStatus": "accepted",
+          "trackingNote": "2023-08-06",
+          "orderStatusDateTime": "2023-08-02T14:27:45.362Z"
+        },
+        {
+          "orderStatus": "packed",
+          "trackingNote": "Will be shipped soon with Ecom",
+          "orderStatusDateTime": "2023-08-02T14:28:34.473Z"
+        },
+        {
+          "orderStatus": "assigned",
+          "trackingNote": "Ecom Express",
+          "orderStatusDateTime": "2023-08-02T14:28:50.314Z"
+        },
+        {
+          "orderStatus": "picked",
+          "trackingNote": "TRACKING-ECOM-123",
+          "orderStatusDateTime": "2023-08-02T14:29:21.684Z"
+        },
+        {
+          "orderStatus": "delivered",
+          "trackingNote": "2023-08-02",
+          "orderStatusDateTime": "2023-08-02T14:29:55.453Z"
+        },
+        {
+          "orderStatus": "verified",
+          "trackingNote": "Acceted by the customer",
+          "orderStatusDateTime": "2023-08-02T14:30:24.008Z"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "orderId": "SRIWED AUG 02 2023 19:57:13",
+      "userId": "123b4",
+      "orderUpdates": [
+        {
+          "orderStatus": "placed",
+          "orderStatusDateTime": "2023-08-02T14:27:13.183Z",
+          "orderStatusNote": ""
+        },
+        {
+          "orderStatus": "accepted",
+          "trackingNote": "2023-08-05",
+          "orderStatusDateTime": "2023-08-02T14:31:21.553Z"
+        },
+        {
+          "orderStatus": "packed",
+          "trackingNote": "Will be picked tomorrow",
+          "orderStatusDateTime": "2023-08-02T14:31:43.572Z"
+        },
+        {
+          "orderStatus": "assigned",
+          "trackingNote": "Ecom Express",
+          "orderStatusDateTime": "2023-08-02T14:31:52.221Z"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "orderId": "SRITHU AUG 03 2023 15:45:03",
+      "userId": "123b4",
+      "orderUpdates": [
+        {
+          "orderStatus": "placed",
+          "orderStatusDateTime": "2023-08-03T10:15:03.466Z",
+          "orderStatusNote": ""
+        }
+      ],
+      "id": 4
+    }
+  ]
+}

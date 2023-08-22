@@ -1,0 +1,76 @@
+<div class="container">
+  <section class="h-100 py-5">
+    <div class="row d-flex justify-content-center h-100">
+      <div class="col-md-10 col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">Payment Details</h3>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+          <div class="col-md-8">
+            <form [formGroup]="paymentForm" (ngSubmit)="addPayment()">
+              <div class="my-3">
+                <div class="form-check">
+                  <input id="credit" name="paymentMethod" value="upi" type="radio" class="form-check-input"
+                    formControlName="paymentMethod" [attr.selected]="true">
+                  <label class="form-check-label" for="credit">UPI</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" value="debit" type="radio" class="form-check-input"
+                    formControlName="paymentMethod" [attr.disabled]="true">
+                  <label class="form-check-label" for="debit">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="debit" name="paymentMethod" value="credit" type="radio" class="form-check-input"
+                    formControlName="paymentMethod" [attr.disabled]="true">
+                  <label class="form-check-label" for="debit">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input id="paypal" name="paymentMethod" value="paypal" type="radio" class="form-check-input"
+                    formControlName="paymentMethod" [attr.disabled]="true">
+                  <label class="form-check-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+
+              <div class="row gy-3">
+                <div class="col-md-6">
+                  <label for="upiId" class="form-label">UPI ID</label>
+                  <input type="text" class="form-control" formControlName="upiId">
+                  <small class="text-muted d-none">
+                    <span *ngIf="pf['upiId'].errors?.['required']"> whre you paid/will pay </span>
+                    <span class="text-danger" *ngIf="pf['upiId'].errors?.['required'] && (pf['upiId'].touched || pf['upiId'].dirty)">
+                      UPI id is required
+                    </span>
+                    <span class="text-danger" *ngIf="pf['upiId'].errors?.['pattern'] && pf['upiId'].touched" >
+                      Please enter a valid upi ID
+                    </span>
+                  </small>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="transationRefNum" class="form-label">Reference/Transation number</label>
+                  <input type="text" class="form-control" formControlName="transationRefNum">
+                  <span class="text-danger" *ngIf="pf['transationRefNum'].errors?.['required'] && (pf['transationRefNum'].touched || pf['transationRefNum'].dirty)">
+                    Transation Ref. Num is required
+                  </span>
+                </div>
+
+                <div class="mb-3">
+                  <label for="paymentScreenshoot" class="form-label">Upload Transaction Image/screenshoot</label>
+                  <input type="file" class="form-control" aria-label="file example" formControlName="paymentScreenshoot">
+                  <span class="text-danger" *ngIf="pf['paymentScreenshoot'].errors?.['required'] && (pf['paymentScreenshoot'].touched || pf['paymentScreenshoot'].dirty)">
+                    Please upload the payment screenshoot
+                  </span>
+                </div>
+                <button href="order/summary/oreder-id" class="w-100 btn btn-primary btn-lg" [disabled]="!paymentForm.valid">Place Order</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <img class="card-img-top mb-5 mb-md-0" src="../assets/images/paytmqrspal.jpeg" alt="QR_Code">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

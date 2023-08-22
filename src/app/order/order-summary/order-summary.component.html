@@ -1,0 +1,153 @@
+<div class="container">
+  <section class="h-100 py-5">
+    <div class="row d-flex justify-content-center h-100">
+      <div class="col-md-10 col-12">
+        <div class="card">
+          <div class="invoice p-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <img src="../assets/favicons/favicon-32x32.png" width="50">
+              <h5 *ngIf="!orderDeialsPage">Wahhh... Your order Confirmed!</h5>
+              <h5 *ngIf="orderDeialsPage">Your order details!</h5>
+            </div>
+            <span class="font-weight-bold d-block mt-4">Hello, {{currentOrderData?.address.fName}}</span>
+            <span *ngIf="!orderDeialsPage">You order has been confirmed and will be shipped in next two days!</span>
+            <span *ngIf="orderDeialsPage">We received your order. you can track your order the status on <a routerLink="/order/track/{{currentOrderData?.orderId}}">track order</a> page!</span>
+            <div class="payment border-top mt-3 mb-3 border-bottom table-responsive">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="py-2">
+                        <span class="d-block text-muted">Order Date</span>
+                        <span>{{currentOrderData?.orderDateTime  | date:'medium'}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="py-2">
+                        <span class="d-block text-muted">Order No</span>
+                        <span>{{currentOrderData?.orderId}}</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="py-2">
+                        <span class="d-block text-muted">Payment</span>
+                        <span><img src="https://img.icons8.com/color/48/000000/mastercard.png"
+                            width="20" />Online(UPI)</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="py-2">
+                        <span class="d-block text-muted">Shiping Address</span>
+                        <span>{{currentOrderData?.address.line1}}{{currentOrderData?.address.line2}}{{currentOrderData?.address.state}}{{currentOrderData?.address.country}}{{currentOrderData?.address.postalCode}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="product border-bottom table-responsive">
+              <table class="table table-borderless">
+                <tbody>
+                  <tr *ngFor="let product of currentOrderData?.product; let i = index;">
+                    <td width="20%" [routerLink]="['../../../product/view/', product.id]">
+                      <img src="{{product.image}}" width="90">
+                    </td>
+                    <td width="60%">
+                      <span class="font-weight-bold">{{product.name}}</span>
+                      <div class="product-qty">
+                        <span class="d-block">Quantity: {{product.quantity}}</span>
+                        <!-- <span>Color:Dark</span> -->
+                      </div>
+                    </td>
+                    <td width="20%">
+                      <div class="text-right">
+                        <span class="font-weight-bold">₹ {{product.price}}</span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row d-flex justify-content-end">
+              <div class="col-md-5">
+                <table class="table table-borderless">
+                  <tbody class="totals">
+                    <tr>
+                      <td>
+                        <div class="text-left">
+                          <span class="text-muted">Subtotal({{currentOrderData?.totalItemNo}})</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-right">
+                          <span>₹ {{currentOrderData?.grandTotalAmount}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="text-left">
+                          <span class="text-muted">Shipping</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-right">
+                          <span>₹ 59</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="text-left">
+                          <span class="text-muted">Tax Fee</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-right">
+                          <span>With the produt price</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="text-left">
+
+                          <span class="text-muted">Discount(-)</span>
+
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-right">
+                          <span class="text-success">₹ 59</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="border-top border-bottom">
+                      <td>
+                        <div class="text-left">
+                          <span class="font-weight-bold">Subtotal</span>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-right">
+                          <span class="font-weight-bold">₹ {{currentOrderData?.grandTotalAmount}}</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p *ngIf="!orderDeialsPage">We will be sending shipping confirmation email when the item shipped successfully!</p>
+            <p class="font-weight-bold mb-0">Thanks for shopping with us!</p>
+            <span>My shopping Team</span>
+          </div>
+          <div class="d-flex justify-content-between footer p-3">
+            <span>Need Help? visit our <a href="../pages/contact.html"> help center</a></span>
+            <span>Friday, April 21, 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

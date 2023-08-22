@@ -1,0 +1,83 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-lg-3 mt-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-9">
+    <h2>{{formString}} Addresses</h2>
+    <hr>
+    <form class="needs-validation" [formGroup]="addAddressForm" (ngSubmit)="addOrUpdateAddress()" novalidate>
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <label for="fName" class="form-label">First name</label>
+          <input type="text" class="form-control" placeholder="" formControlName="fName" id="fName">
+          <div class="text-danger" *ngIf="addAddressFormCtrl['fName'].errors?.['required'] && (addAddressFormCtrl['fName'].touched || addAddressFormCtrl['fName'].dirty)">
+            Valid first name is required.
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <label for="lName" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="lName" placeholder="" formControlName="lName">
+          <div class="text-danger" *ngIf="addAddressFormCtrl['lName'].errors?.['required'] && (addAddressFormCtrl['lName'].touched || addAddressFormCtrl['lName'].dirty)">
+            Valid last name is required.
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="line1" class="form-label">Address</label>
+          <input type="text" class="form-control" id="line1" placeholder="1234 Main St" formControlName="line1">
+          <div class="text-danger" *ngIf="addAddressFormCtrl['line1'].errors?.['required'] && (addAddressFormCtrl['line1'].touched || addAddressFormCtrl['line1'].dirty)">
+            Please enter your shipping address.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <label for="line2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+          <input type="text" class="form-control" id="line2" placeholder="Apartment or suite" formControlName="line2">
+        </div>
+
+        <div class="col-md-5">
+          <label for="country" class="form-label">Country</label>
+          <select class="form-select" id="country" formControlName="country">
+            <!-- <option value="{{defaultAddress?.country}}" *ngIf="defaultAddress?.country" selected>{{defaultAddress?.country}}</option>
+            <hr>
+            <option value="" *ngIf="!defaultAddress?.state">Choose...</option>
+            <option>India</option> -->
+            <option *ngFor="let country of countries" [ngValue]="country">{{ country }}</option>
+          </select>
+          <div class="text-danger" *ngIf="addAddressFormCtrl['country'].errors?.['required'] && (addAddressFormCtrl['country'].touched || addAddressFormCtrl['country'].dirty)">
+            Please select a valid country.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select" id="state" formControlName="state">
+            <!-- <option value="{{defaultAddress?.state}}" *ngIf="defaultAddress?.state" selected>{{defaultAddress?.state}}</option>
+            <hr>
+            <option value="" *ngIf="!defaultAddress?.state">Choose...</option>
+            <option>Odisha</option>
+            <option>Karnataka</option>
+            <option>Delhi</option>
+            <option>Maharastra</option> -->
+            <option *ngFor="let state of states" [ngValue]="state">{{ state }}</option>
+          </select>
+          <div class="text-danger" *ngIf="addAddressFormCtrl['state'].errors?.['required'] && (addAddressFormCtrl['state'].touched || addAddressFormCtrl['state'].dirty)">
+            Please provide a valid state.
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <label for="postalCode" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="postalCode" placeholder="123456" formControlName="postalCode">
+          <div class="text-danger" *ngIf="addAddressFormCtrl['postalCode'].errors?.['required'] && (addAddressFormCtrl['postalCode'].touched || addAddressFormCtrl['postalCode'].dirty)">
+            Zip code required.
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <!-- <a [routerLink]="['../payment']" [state]="{ currentOrderAddress:addressForCurrentOrder }" class="w-100 btn btn-primary btn-lg">Check next step (To be removed: now testing only)</a><br><br> -->
+      <button class="w-100 btn btn-primary btn-lg" type="submit" [disabled]="!addAddressForm.valid">{{formString}} Address</button>
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Newly added product</h5>
+        <div>
+          <div class="row">
+            <div class="col-md-6 col-6 mb-2" *ngFor="let product of productList?.slice(-2);">
+              <div class="card h-100">
+                <!-- Product image-->
+                <a href="product/view/{{product.id}}">
+                  <img class="card-img-top card-multi-product" src="{{product.image}}" alt="{{product.name}}" />
+                </a>
+                <!-- Product details-->
+                <div class="card-body">
+                  <p class="col-12 text-truncate">{{product.name}}</p>
+                  <div class="d-grid">
+                    <button class="btn btn-outline-primary me-2" type="button">&#8377; {{product.price}}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Product on sale</h5>
+        <div>
+          <div class="row ">
+            <div class="col-md-6 col-6 mb-2" *ngFor="let product of productList?.slice(0, 2);">
+              <div class="card h-100">
+                <!-- Product image-->
+                <a href="product/view/{{product.id}}">
+                  <img class="card-img-top card-multi-product" src="{{product.image}}" alt="{{product.name}}" />
+                </a>
+                <!-- Product details-->
+                <div class="card-body">
+                  <p class="col-12 text-truncate">{{product.name}}</p>
+                  <div class="d-grid">
+                    <button class="btn btn-outline-primary me-2" type="button">&#8377; {{product.price}}</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Become a partner</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Your presence on our website will make both richer and
+          popular</h6>
+        <p class="card-text">Sell on our website with 50% off on Selling fee</p>
+        <a href="pages/registerUser.html" class="card-link">Register to sell</a>
+      </div>
+    </div>
+    <div class="card mt-2">
+      <div class="card-body">
+        <a href="pages/pageNotFound.html">
+          <img class="card-img-top sponcer-add-img"
+            src="https://m.media-amazon.com/images/G/31/img22/Laptops/Asus_Apr20/Category_1400x800._CB592100135_.jpg"
+            alt="" />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<nav class="bg-primary border-bottom">
+  <div class="container d-flex flex-wrap">
+    <ul class="nav me-auto">
+      <li class="nav-item"><a href="home" class="nav-link text-white px-2 active" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="about-us" class="nav-link text-white px-2">About</a></li>
+      <li class="nav-item"><a href="faq" class="nav-link text-white px-2">FAQ</a></li>
+      <li class="nav-item"><a href="contact-us" class="nav-link text-white px-2">Contact</a></li>
+    </ul>
+    <ul class="nav">
+      <li class="nav-item" *ngIf="!loggedIn"><a href="user/login" class="nav-link text-white px-2">Login</a></li>
+      <li class="nav-item d-none d-sm-block" *ngIf="!loggedIn"><a href="user/register" class="nav-link text-white px-2">Sign up</a></li>
+      <li class="nav-item dropdown" *ngIf="loggedIn">
+        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-person-circle"> Hi {{userFname}}</i>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="user/profile">Profile</a></li>
+          <li><a class="dropdown-item" href="order/list">Orders</a></li>
+          <li><a class="dropdown-item" href="user/saved-address">Address</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" (click)="logOut()">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

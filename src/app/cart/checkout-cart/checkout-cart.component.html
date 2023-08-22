@@ -1,0 +1,109 @@
+<div class="container">
+  <section class="h-100 py-5">
+    <div class="row d-flex justify-content-center h-100">
+      <div class="col-md-10 col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">Shipping address</h3>
+          <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <a href="user/saved-address" type="button" class="btn btn-outline-info">View Saved Addresses</a>
+            <a href="/user/add-address" class="btn btn-outline-info">Add New Address</a>
+          </div>
+        </div>
+        <div class="card text-info mb-3">
+          <div class="card-body">
+            <small>
+              <span># The default address is shownin below if you want to modify the address you can modify that
+                will update the current address</span><br>
+              <span># If you want to select from existing address click and select form the saved address</span><br>
+              <span># If you want to add new address you can click on add new address and mrk that address as default</span>
+            </small>
+          </div>
+        </div>
+        <hr>
+        <form class="needs-validation" [formGroup]="addAddressForm" (ngSubmit)="addOrUpdateAddress()">
+          <div class="row g-3 align-items-center">
+            <div class="col-6 d-flex">
+              <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse" (click)="updateAddressCheck($event)">
+                <label class="form-check-label" for="flexSwitchCheckReverse">Want to modify the shipping address</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-check form-switch form-check-reverse" *ngIf="addAsNewAddress">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse" (click)="newAddressCheck($event)">
+                <label class="form-check-label" for="flexSwitchCheckReverse">Waht to add as a new address </label>
+              </div>
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="fName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="fName" placeholder="" formControlName="fName">
+              <div class="text-danger d-none" *ngIf="addressFormCtrl['fName'].errors?.['required'] && (addressFormCtrl['fName'].touched || addressFormCtrl['fName'].dirty)">
+                Valid first name is required.
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <label for="lName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lName" placeholder="" formControlName="lName">
+              <div class="text-danger d-none" *ngIf="addressFormCtrl['lName'].errors?.['required'] && (addressFormCtrl['lName'].touched || addressFormCtrl['lName'].dirty)">
+                Valid last name is required.
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="line1" class="form-label">Address</label>
+              <input type="text" class="form-control" id="line1" placeholder="1234 Main St" formControlName="line1">
+              <div class="text-danger d-none" *ngIf="addressFormCtrl['line1'].errors?.['required'] && (addressFormCtrl['line1'].touched || addressFormCtrl['line1'].dirty)">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="line2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+              <input type="text" class="form-control" id="line2" placeholder="Apartment or suite"
+                formControlName="line2">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" formControlName="country">
+                <option *ngFor="let country of countries" [ngValue]="country">{{ country }}</option>
+              </select>
+              <div class="text-danger" *ngIf="addressFormCtrl['country'].errors?.['required'] && (addressFormCtrl['country'].touched || addressFormCtrl['country'].dirty)">
+                Please select a country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" formControlName="state">
+                <option *ngFor="let state of states" [ngValue]="state">{{ state }}</option>
+              </select>
+              <div class="text-danger" *ngIf="addressFormCtrl['state'].errors?.['required'] && (addressFormCtrl['state'].touched || addressFormCtrl['state'].dirty)">
+                Please select state.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="postalCode" class="form-label">Postal Code</label>
+              <input type="text" class="form-control" id="postalCode" placeholder="123456"
+                formControlName="postalCode">
+              <div class="text-danger">
+                <span *ngIf="addressFormCtrl['postalCode'].errors?.['required'] && (addressFormCtrl['postalCode'].touched || addressFormCtrl['postalCode'].dirty)">
+                  Postal Code is required
+                </span>
+                <span *ngIf="addressFormCtrl['postalCode'].errors?.['pattern'] && addressFormCtrl['postalCode'].touched" >
+                  Please enter a valid Postal/PIN Code
+                </span>
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <!-- <a href="payment/cart-payment" class="w-100 btn btn-primary btn-lg" type="submit">Continue to pay </a> -->
+          <button class="w-100 btn btn-primary btn-lg" type="submit" [disabled]="(this.addressType != 'existing') && !addAddressForm.valid">Continue to pay </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,86 @@
+
+<div class="container">
+  <!-- Modal for order status update start -->
+  <div class="modal fade" id="orderTrackingUpdateModal" tabindex="-1"
+    aria-labelledby="orderTrackingUpdateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="orderTrackingUpdateModalLabel">Update Order Tracking</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="statusUpdateLabel" class="form-label">Actionable Tracking Status</label>
+              <select id="statusUpdate" required class="form-select" name="orderStatus">
+                <option>Accepted</option>
+                <option>Packed</option>
+                <option>Picked</option>
+                <option>Delivered</option>
+                <option>Verified</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="basic-url" class="form-label">Enter tracking note</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">Tracking Note</span>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" (click)="onUpdateOrderTracking()">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal for order status update end -->
+
+  <section class="h-100 py-5">
+    <div class="row d-flex justify-content-center h-100">
+      <div class="col-md-10 col-12">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">Order Status</h3>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#orderTrackingUpdateModal">
+            Update Tracking Details
+          </button>
+        </div>
+        <div class="container">
+          <div class="track-order">
+            <div class="col-md-12 col-12 order-header p-2">
+              <div class="row">
+                <div class="col-md-4 col-12">
+                  Order ID: <br>{{trackOrderData?.orderId}}  <!-- TODO: will have to create own custom pipe for order id-->
+                </div>
+                <div class="col-md-4 col-12">
+                  {{deliveyDateMsg}}: <br>{{deliveryDate}}
+                </div>
+                <div class="col-md-4 col-12">
+                  Shipped With: {{trackingCourierName}}<br>
+                  Tracking ID: {{orderTrackingId}}
+                </div>
+              </div>
+              <!-- <p><a href="../pages/orderDetails.html">See order detail</a></p> -->
+            </div>
+            <div class="col-md-12 col-12 order-body">
+              <div class="sim-card">
+                <ul class="list-ic vertical">
+                  <li *ngFor="let trcOrdSts of trackOrderData?.orderUpdates">
+                    <span class="ststus-box-ed"></span>
+                    <span class="ststus-text">
+                      {{trcOrdSts.orderStatus | titlecase }} - {{trcOrdSts.orderStatusDateTime | date:'medium'}}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

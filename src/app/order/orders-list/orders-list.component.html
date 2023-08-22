@@ -1,0 +1,46 @@
+<div class="container">
+  <section class="h-100 py-5">
+    <div class="row d-flex justify-content-center h-100">
+      <!-- If there is no order for the user-->
+      <div *ngIf="(!orderList?.length)">
+        <img src="../../../assets/images/empty-shopping-cart.png" class="img-fluid rounded mx-auto d-block"
+          alt="image name">
+        <div class="text-center mb-5 mt-5">
+          <h3>There is no order yet. </h3>
+          <a href="product/products-list" class="btn btn-info btn-lg mt-4">Shop now</a>
+        </div>
+      </div>
+
+      <div class="col-md-10 col-12" *ngIf="(orderList?.length)">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 class="fw-normal mb-0 text-black">Your All Order</h3>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Total Quantity</th>
+              <th scope="col">Total Price</th>
+              <th scope="col">Order date</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody class="table-group-divider">
+            <tr *ngFor="let order of orderList; let i = index;">
+              <th scope="row">{{i+1}}</th>
+              <td>{{order.product[0].name}} <b *ngIf="order.product.length-1">+ {{order.product.length-1}} more items</b></td>
+              <td>{{order.product.length}}</td>
+              <td>{{order.grandTotalAmount}}</td>
+               <td>{{order.orderDateTime | date: 'dd-MM-yyyy'}}</td> <!-- TODO: create your own date pipe -->
+              <td>
+                <a routerLink="/order/details/{{order.orderId}}" class="text-info"><i class="bi bi-eye"></i></a> &nbsp;
+                <a routerLink="/order/track/{{order.orderId}}" class="text-warning"><i class="bi bi-truck"></i></a> &nbsp;
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</div>
